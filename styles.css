@@ -1,28 +1,18 @@
-@media screen and (max-width: 375px){
-	header, #try,#details, #contacts{
-		display:flex;
-		flex-direction:row;
-	}
-}
 
 body{
 	font-size: 18px;
     font-family: 'Open Sans', sans-serif;
     background-color:hsl(214, 64%, 98%);
     color:hsl(208, 11%, 55%);
-}
-
-section{
-	margin-bottom: 200px;
+    margin:0 auto;
 }
 
 header, #try{
 	display: grid;
 	grid-template-columns: repeat(4,1fr);
-	grid-auto-rows: minmax(200px,auto);
-	padding: 50px;
-	margin-bottom: 200px;
-	
+	margin: 20px;
+	text-align: center;
+	align-items: center;
 }
 
 header img{
@@ -31,28 +21,20 @@ header img{
 
 header a{
 	grid-column: 4;
+	padding:10px;
+	width: 50%;
 	justify-self:end;
-	align-self: start;
-
 }
 
 header div{
 	grid-column: 2/4;
-	align-items: center;
-	justify-items:center;
-	text-align: center;
 }
 
 #details{
 	display: grid;
 	grid-template-columns: repeat(2,1fr);
-	grid-auto-rows: minmax(200px, auto);
 	grid-gap: 100px;
-}
-
-#text_details{
-	display: grid;
-	grid-template-rows: repeat(3,1fr);
+	padding: 20px;
 }
 
 #try div{
@@ -68,17 +50,15 @@ header div{
 #contacts{
 	display:grid;
 	grid-template-columns: repeat(4,1fr);
-	grid-auto-rows: minmax(100px, auto);
 	grid-column-gap: 50px;
-	margin-bottom: 100px;
-	padding: 50px;
 	background-color: hsl(192, 100%, 9%);
 	color: white;
 	align-items: flex-start;
+	padding:20px;
 }
 
 #one{
-  grid-column: 1 / 4;
+  grid-column: 1;
   grid-row: 1;
 }
 #two{
@@ -110,8 +90,11 @@ header div{
 	text-transform: uppercase;
 }
 #contacts textarea{
-	display: inline;
 	width: 100%;
+}
+
+#contacts a{
+	justify-self: end;
 }
 
 h1{
@@ -127,21 +110,20 @@ img{
 a{
   background-color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 2px;
   color: hsl(265, 100%, 66%);
-  padding: 15px 32px;
-  text-align: center;
   text-decoration: none;
-  margin: 4px 2px;
   cursor: pointer;
   -webkit-box-shadow: -1px 13px 22px 0px rgba(0,0,0,0.37);
   -moz-box-shadow: -1px 13px 22px 0px rgba(0,0,0,0.37);
   box-shadow: -1px 13px 22px 0px rgba(0,0,0,0.37);
+  text-align: center;
 }
 
 .get_started{
 	background-color: hsl(322, 100%, 66%);
 	color:white;
+	padding: 10px 30px;
 }
 
 #gradient1{
@@ -169,3 +151,53 @@ a{
 	clip-path: polygon(60% 0, 100% 36%, 40% 100%, 0 64%);
 }
 
+@media screen and (max-width: 800px){
+	body{
+		font-size: 4vw;
+	}
+
+	header a{
+		width: 100%;
+	}
+	header div{
+		grid-column: 1/5;
+	}
+	a{
+		font-size: 0.5em;
+	}
+	#details img, #details div{
+		grid-column: 1/3;
+		text-align: center;
+	}
+
+	#try div{
+		grid-column: 1/5;
+		text-align: center;
+	}
+
+	#contacts{
+		grid-gap: 0;
+	}
+	#one{
+		grid-column: 2/4;
+		grid-row:1;
+	}
+
+	#three{
+		grid-column: 1/3;
+		grid-row:2;
+	}
+	#four{
+		grid-column: 1/3;
+		grid-row:3;
+	}
+	#five{
+		grid-column: 1/5;
+		grid-row: 4;
+		justify-items: center;
+	}
+	#two{
+		grid-column: 1/5;
+		grid-row: 5;
+	}
+}
