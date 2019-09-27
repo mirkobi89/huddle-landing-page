@@ -163,7 +163,7 @@ a{
 		grid-column: 1/5;
 	}
 	a{
-		font-size: 2vh;
+		font-size: 3vw;
 	}
 	#details img, #details div{
 		grid-column: 1/3;
